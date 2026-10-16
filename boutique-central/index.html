@@ -3,365 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boutique Central Ra'anana – Patisserie &amp; Café on Ahuza St.</title>
-  <meta name="description" content="Boutique Central Ra'anana, 124 Ahuza St. Croissants, cakes, pastries and coffee, Sunday to Friday. Order online or get directions.">
-  <meta property="og:type" content="business.business">
-  <meta property="og:title" content="Boutique Central Ra'anana – Patisserie & Café on Ahuza St.">
-  <meta property="og:description" content="Croissants, cakes, pastries and coffee on Ahuza St., Ra'anana.">
-  <link rel="alternate" hreflang="he" href="https://www.boutiquecentral.co.il/shop/raanana/">
-  <link rel="alternate" hreflang="en" href="https://www.boutiquecentral.co.il/en/shop/raanana/">
+  <title>Boutique Central – Patisserie like in Paris</title>
+  <meta name="description" content="Boutique Central: French patisserie and café with boutiques across Israel. Croissants, cakes, pastries and hospitality trays. Order online or find a boutique near you.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Boutique Central – Patisserie like in Paris">
+  <link rel="alternate" hreflang="he" href="https://www.boutiquecentral.co.il/">
+  <link rel="alternate" hreflang="en" href="https://www.boutiquecentral.co.il/en/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Bakery",
-        "name": "Boutique Central Ra'anana",
-        "url": "https://www.boutiquecentral.co.il/en/shop/raanana/",
-        "telephone": "+972-1-700-700-061",
-        "servesCuisine": ["French", "Patisserie", "Coffee"],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "124 Ahuza St.",
-          "addressLocality": "Ra'anana",
-          "addressCountry": "IL"
-        },
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "07:00", "closes": "20:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:00", "closes": "14:00" }
-        ],
-        "parentOrganization": { "@type": "Organization", "name": "Boutique Central", "url": "https://www.boutiquecentral.co.il/" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boutiquecentral.co.il/en/" },
-          { "@type": "ListItem", "position": 2, "name": "Boutiques", "item": "https://www.boutiquecentral.co.il/en/shop/" },
-          { "@type": "ListItem", "position": 3, "name": "Hasharon Area" },
-          { "@type": "ListItem", "position": 4, "name": "Ra'anana" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Are you open on Saturday?", "acceptedAnswer": { "@type": "Answer", "text": "No. The boutique is closed on Saturday." } },
-          { "@type": "Question", "name": "Can I order a cake for pickup here?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Order online and choose pickup at the Ra'anana boutique." } }
-        ]
-      }
-    ]
+    "@type": "Organization",
+    "name": "Boutique Central",
+    "url": "https://www.boutiquecentral.co.il/",
+    "telephone": "+972-1-700-700-061",
+    "sameAs": ["https://www.instagram.com/boutique_central/"]
   }
   </script>
-
-  <style>
-    :root {
-      --navy: #14254a;
-      --navy-700: #1f3566;
-      --navy-50: #eef1f7;
-      --white: #ffffff;
-      --bg: #fbfaf7;
-      --text: #14254a;
-      --muted: #4b5876;
-      --line: #dfe3ec;
-      --ok: #17784a;
-      --closed: #b3261e;
-
-      /* Escala tipográfica: 4 tamaños, 2 pesos */
-      --fs-sm: 0.875rem;
-      --fs-base: 1.0625rem;
-      --fs-lg: clamp(1.5rem, 3vw, 2rem);
-      --fs-xl: clamp(2.5rem, 7vw, 4.25rem);
-      --fw-regular: 400;
-      --fw-bold: 700;
-
-      --radius: 14px;
-      --gutter: 16px;
-      --font-display: "Frank Ruhl Libre", Georgia, serif;
-      --font-body: "Heebo", system-ui, -apple-system, sans-serif;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      font-size: var(--fs-base);
-      font-weight: var(--fw-regular);
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-    }
-    a { color: inherit; }
-    img { max-width: 100%; display: block; }
-    button { font: inherit; cursor: pointer; }
-    :focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; border-radius: 4px; }
-    .container { width: min(1160px, 100% - 2 * var(--gutter)); margin-inline: auto; }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .skip { position: absolute; inset-inline-start: 8px; top: -60px; background: var(--navy); color: #fff; padding: 10px 16px; border-radius: 8px; z-index: 100; }
-    .skip:focus { top: 8px; }
-
-    h1, h2, h3 { font-family: var(--font-display); font-weight: var(--fw-bold); line-height: 1.15; }
-    h2 { font-size: var(--fs-lg); margin-bottom: 8px; }
-    h3 { font-size: 1.2rem; }
-    .lead { color: var(--muted); margin-bottom: 28px; max-width: 60ch; }
-    section { padding-block: 56px; }
-    section + section { border-top: 1px solid var(--line); }
-
-    /* Aviso de prototipo */
-    .proto { background: #fff4d6; color: #5c4400; font-size: var(--fs-sm); text-align: center; padding: 6px var(--gutter); }
-
-    /* Datos pendientes del cliente */
-    .pending {
-      border: 1.5px dashed #c7cedd; border-radius: var(--radius); padding: 16px;
-      color: var(--muted); font-size: var(--fs-sm); background: #fff;
-    }
-    .pending::before { content: "⚑ "; color: #b07d00; }
-
-    /* Botones */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 48px; padding: 12px 22px; border-radius: 999px;
-      font-weight: var(--fw-bold); font-size: 1rem; text-decoration: none;
-      border: 2px solid transparent; transition: background .2s, color .2s, transform .15s;
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-solid { background: var(--navy); color: #fff; }
-    .btn-solid:hover { background: var(--navy-700); }
-    .btn-white { background: #fff; color: var(--navy); }
-    .btn-outline { border-color: currentColor; background: transparent; }
-    .btn svg { width: 20px; height: 20px; flex: none; }
-
-    /* Encabezado */
-    header.site {
-      position: sticky; top: 0; z-index: 30; background: var(--white);
-      border-bottom: 1px solid var(--line);
-    }
-    .bar { display: flex; align-items: center; gap: 20px; min-height: 72px; }
-    .logo { text-decoration: none; line-height: 1.05; }
-    .logo b { display: block; font-family: var(--font-display); font-size: 1.45rem; letter-spacing: .02em; }
-    .logo small { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-    .menu { display: flex; align-items: center; gap: 6px; margin-inline-start: auto; list-style: none; }
-    .menu a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 12px; text-decoration: none; font-weight: 500; }
-    .menu a:not(.btn):hover { text-decoration: underline; text-underline-offset: 4px; }
-    .menu .btn { padding-inline: 18px; margin-inline-start: 6px; }
-    .lang {
-      min-width: 44px; min-height: 44px; padding-inline: 12px; margin-inline-start: 8px;
-      border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--navy); font-weight: 500;
-    }
-    .burger { display: none; margin-inline-start: auto; width: 44px; height: 44px; border: 0; background: none; color: var(--navy); }
-    @media (max-width: 900px) {
-      .burger { display: inline-grid; place-items: center; }
-      .menu {
-        display: none; position: absolute; inset-inline: 0; top: 100%;
-        flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 16px;
-        background: #fff; border-bottom: 1px solid var(--line);
-      }
-      .menu.open { display: flex; }
-      .menu .btn { margin: 8px 0 0; }
-      .lang { margin: 0; }
-    }
-
-    /* Migas de pan */
-    .crumbs { font-size: var(--fs-sm); color: var(--muted); padding-block: 14px; }
-    .crumbs ol { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
-    .crumbs li + li::before { content: "›"; margin-inline-end: 6px; }
-    [dir="rtl"] .crumbs li + li::before { content: "‹"; }
-    .crumbs a { text-decoration: none; }
-    .crumbs a:hover { text-decoration: underline; }
-    .crumbs [aria-current] { color: var(--navy); font-weight: 500; }
-
-    /* Portada */
-    .hero { position: relative; min-height: min(78vh, 620px); color: #fff; overflow: hidden; border-radius: 0 0 24px 24px; background: var(--navy); }
-    .slides { position: absolute; inset: 0; }
-    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease; }
-    .slide.active { opacity: 1; }
-    .ph { width: 100%; height: 100%; display: grid; place-items: center; }
-    .ph span { font-size: var(--fs-sm); letter-spacing: .1em; text-transform: uppercase; opacity: .55; }
-    .ph-1 { background: radial-gradient(circle at 70% 40%, #e8b77a, #9a5b2a 55%, #3c2414); }
-    .ph-2 { background: radial-gradient(circle at 60% 60%, #f3d9b1, #b9875a 50%, #4a2e1a); }
-    .ph-3 { background: radial-gradient(circle at 75% 30%, #d8c3a5, #7d5a44 55%, #2b1d14); }
-    .ph-4 { background: radial-gradient(circle at 40% 50%, #f0c7c0, #b56b6b 55%, #3e1f24); }
-    .ph-5 { background: radial-gradient(circle at 50% 40%, #e9dcc6, #a08867 55%, #33291d); }
-    .hero::after {
-      content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: linear-gradient(to right, rgba(10,20,42,.88) 0%, rgba(10,20,42,.65) 45%, rgba(10,20,42,.1) 80%);
-    }
-    [dir="rtl"] .hero::after { background: linear-gradient(to left, rgba(10,20,42,.88) 0%, rgba(10,20,42,.65) 45%, rgba(10,20,42,.1) 80%); }
-    .hero-content { position: relative; z-index: 2; padding-block: 96px 120px; }
-    .hero-content > * { max-width: 560px; }
-    .zone { display: inline-block; font-size: var(--fs-sm); font-weight: var(--fw-bold); letter-spacing: .12em; text-transform: uppercase; opacity: .9; margin-bottom: 10px; }
-    .hero h1 { font-size: var(--fs-xl); margin-bottom: 14px; }
-    .hero p { font-size: 1.15rem; font-weight: 500; margin-bottom: 28px; }
-    .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero .btn-outline { color: #fff; }
-    .carousel-ui { position: absolute; z-index: 3; inset-inline: 0; bottom: 24px; }
-    .carousel-ui .container { display: flex; align-items: center; gap: 12px; }
-    .arrow {
-      width: 48px; height: 48px; border-radius: 50%; border: 0;
-      background: rgba(255,255,255,.22); color: #fff; backdrop-filter: blur(6px);
-      display: grid; place-items: center; transition: background .2s;
-    }
-    .arrow:hover { background: rgba(255,255,255,.38); }
-    .arrow svg { width: 22px; height: 22px; }
-    [dir="rtl"] .arrow svg { transform: scaleX(-1); }
-    .dots { display: flex; gap: 4px; margin-inline: 8px; }
-    .dot { width: 24px; height: 44px; border: 0; background: none; display: grid; place-items: center; }
-    .dot::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.5); transition: width .2s; }
-    .dot[aria-current="true"]::before { width: 22px; border-radius: 6px; background: #fff; }
-
-    /* Introducción */
-    .intro { padding-block: 40px 8px; }
-    .intro p { max-width: 70ch; color: var(--muted); font-size: 1.1rem; }
-
-    /* Bloque de información */
-    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-    @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
-    .info-card { background: var(--navy); color: #fff; border-radius: 20px; padding: clamp(20px, 4vw, 32px); }
-    .status { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #fff; font-weight: var(--fw-bold); font-size: var(--fs-sm); margin-bottom: 20px; }
-    .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
-    .status.open { color: var(--ok); }
-    .status.closed { color: var(--closed); }
-    .info-card h3 { font-family: var(--font-body); font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: .12em; opacity: .75; margin-bottom: 8px; }
-    .info-card .block + .block { margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.18); }
-    .hours { width: 100%; border-collapse: collapse; }
-    .hours th { text-align: start; font-weight: 400; padding-block: 4px; }
-    .hours td { text-align: end; font-weight: var(--fw-bold); font-variant-numeric: tabular-nums; }
-    .hours tr.today th, .hours tr.today td { color: #ffd77a; }
-    .note { font-size: var(--fs-sm); opacity: .75; margin-top: 6px; }
-    .phones { display: grid; gap: 8px; list-style: none; }
-    .phones li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .phones a { font-weight: var(--fw-bold); text-decoration: none; }
-    .tag { font-size: var(--fs-sm); opacity: .8; }
-    .nav-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-    .nav-btns .btn { flex: 1 1 180px; }
-    .map { border: 0; width: 100%; height: 100%; min-height: 320px; border-radius: 20px; background: var(--navy-50); }
-    .map-wrap { display: grid; gap: 16px; height: 100%; grid-template-rows: 1fr auto; }
-
-    /* Tarjetas */
-    .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
-    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-    .card .ph { aspect-ratio: 4 / 3; height: auto; color: #fff; }
-    .card .body { padding: 14px 16px 18px; }
-    .card p { font-size: var(--fs-sm); color: var(--muted); }
-
-    /* Encargar pastel / eventos */
-    .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; }
-    @media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
-    .panel { background: var(--navy-50); border-radius: 24px; padding: clamp(24px, 5vw, 48px); }
-    .panel .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .panel .ph { border-radius: 18px; aspect-ratio: 4 / 3; height: auto; color: #fff; }
-
-    /* Galería */
-    .gallery { display: grid; gap: 12px; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; }
-    .gallery button { border: 0; padding: 0; border-radius: 12px; overflow: hidden; color: #fff; }
-    .gallery button:first-child { grid-column: span 2; grid-row: span 2; }
-    .gallery button .ph { transition: transform .4s; }
-    .gallery button:hover .ph { transform: scale(1.04); }
-    @media (max-width: 700px) { .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; } }
-
-    .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(8,14,30,.92); display: none; place-items: center; padding: 24px; }
-    .lightbox.open { display: grid; }
-    .lightbox figure { width: min(960px, 100%); aspect-ratio: 3 / 2; border-radius: 12px; overflow: hidden; color: #fff; }
-    .lightbox .close, .lightbox .arrow { position: absolute; }
-    .lightbox .close { top: 16px; inset-inline-end: 16px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.2); color: #fff; font-size: 1.6rem; }
-    .lightbox .prev { inset-inline-start: 16px; top: 50%; translate: 0 -50%; }
-    .lightbox .next { inset-inline-end: 16px; top: 50%; translate: 0 -50%; }
-
-    /* Servicios del local */
-    .amenities { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); list-style: none; margin-bottom: 16px; }
-    .amenities li { display: flex; align-items: center; gap: 10px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--muted); }
-    .amenities svg { width: 24px; height: 24px; color: var(--navy); flex: none; }
-
-    /* Preguntas frecuentes */
-    .faq { display: grid; gap: 10px; max-width: 820px; }
-    .faq details { background: #fff; border: 1px solid var(--line); border-radius: 12px; }
-    .faq summary { list-style: none; cursor: pointer; padding: 16px 20px; font-weight: var(--fw-bold); display: flex; justify-content: space-between; gap: 12px; min-height: 44px; }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-size: 1.4rem; line-height: 1; }
-    .faq details[open] summary::after { content: "–"; }
-    .faq .answer { padding: 0 20px 18px; color: var(--muted); }
-
-    .insta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
-    /* Pie */
-    footer.site { background: var(--navy); color: #fff; padding-block: 56px 120px; margin-top: 40px; }
-    .foot-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; }
-    @media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr; } }
-    footer h2 { margin-bottom: 18px; }
-    .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 28px; }
-    .zones details summary { list-style: none; font-weight: var(--fw-bold); margin-bottom: 8px; pointer-events: none; }
-    .zones details summary::-webkit-details-marker { display: none; }
-    .zones ul { list-style: none; display: grid; gap: 4px; }
-    .zones a { text-decoration: none; opacity: .85; }
-    .zones a:hover { opacity: 1; text-decoration: underline; }
-    @media (max-width: 700px) {
-      .zones { grid-template-columns: 1fr; gap: 0; }
-      .zones details { border-bottom: 1px solid rgba(255,255,255,.18); }
-      .zones details summary { pointer-events: auto; cursor: pointer; padding-block: 14px; margin: 0; display: flex; justify-content: space-between; }
-      .zones details summary::after { content: "+"; }
-      .zones details[open] summary::after { content: "–"; }
-      .zones ul { padding-bottom: 14px; }
-    }
-    form.contact { display: grid; gap: 14px; }
-    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    @media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } }
-    form.contact label { display: block; font-size: var(--fs-sm); margin-bottom: 4px; opacity: .9; }
-    form.contact input, form.contact select, form.contact textarea {
-      width: 100%; min-height: 46px; padding: 10px 14px; border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: #fff; font: inherit;
-    }
-    form.contact select option { color: var(--navy); }
-    form.contact textarea { min-height: 110px; resize: vertical; }
-    form.contact input::placeholder, form.contact textarea::placeholder { color: rgba(255,255,255,.6); }
-    .check { display: flex; gap: 10px; align-items: flex-start; font-size: var(--fs-sm); }
-    form.contact .check input { width: 20px; min-height: 20px; margin-top: 3px; flex: none; }
-    form.contact .btn-white:hover, form.contact .btn-white:focus-visible { background: #dfe6f5; }
-    .form-msg { font-size: var(--fs-sm); min-height: 1.4em; }
-    .social { display: flex; gap: 10px; margin-top: 24px; }
-    .social a { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.12); }
-    .social svg { width: 20px; height: 20px; }
-    .legal { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: var(--fs-sm); opacity: .75; }
-
-    /* Barra fija en móvil */
-    .mobile-bar { display: none; }
-    @media (max-width: 760px) {
-      .mobile-bar {
-        display: grid; grid-template-columns: repeat(4, 1fr);
-        position: fixed; inset-inline: 0; bottom: 0; z-index: 40;
-        background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(20,37,74,.08);
-        padding-bottom: env(safe-area-inset-bottom);
-      }
-      .mobile-bar a { display: grid; justify-items: center; gap: 2px; padding-block: 8px; min-height: 56px; text-decoration: none; font-size: .75rem; font-weight: 500; }
-      .mobile-bar a.primary { background: var(--navy); color: #fff; }
-      .mobile-bar svg { width: 22px; height: 22px; }
-      .cookie.show { bottom: calc(57px + env(safe-area-inset-bottom)); }
-    }
-
-    /* Barra de cookies */
-    .cookie {
-      position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
-      background: #0d1a36; color: #fff; font-size: var(--fs-sm);
-      display: none;
-    }
-    .cookie.show { display: block; }
-    .cookie .container { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 8px; }
-    .cookie .btn { min-height: 40px; padding: 6px 18px; font-size: var(--fs-sm); }
-
-    /* Ventana del club */
-    .modal { position: fixed; inset: 0; z-index: 90; background: rgba(8,14,30,.6); display: none; place-items: center; padding: var(--gutter); }
-    .modal.open { display: grid; }
-    .dialog { position: relative; width: min(440px, 100%); background: #fff; border-radius: 20px; overflow: hidden; text-align: center; }
-    .dialog .ph { height: 160px; color: #fff; }
-    .dialog .inner { padding: 24px 28px 28px; }
-    .dialog .title { font-family: var(--font-display); font-size: 1.6rem; font-weight: var(--fw-bold); margin-bottom: 6px; }
-    .dialog p { color: var(--muted); margin-bottom: 20px; }
-    .dialog .close { position: absolute; top: 8px; inset-inline-end: 8px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); color: var(--navy); font-size: 1.5rem; line-height: 1; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
-    }
-  </style>
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
@@ -369,7 +30,7 @@
 
   <header class="site">
     <div class="container bar">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html" aria-current="page">
         <b>Boutique Central</b>
         <small data-i18n="tagline">Patisserie like in Paris</small>
       </a>
@@ -377,131 +38,61 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <ul class="menu" id="menu">
-        <li><a href="#" data-i18n="nav_boutiques">Boutiques</a></li>
-        <li><a href="#" data-i18n="nav_patisserie">Patisserie</a></li>
+        <li><a href="#find" data-i18n="nav_boutiques">Boutiques</a></li>
+        <li><a href="#patisserie" data-i18n="nav_patisserie">Patisserie</a></li>
         <li><a href="#events" data-i18n="nav_events">Events</a></li>
-        <li><a class="btn btn-solid" data-link="order" href="#" data-i18n="nav_order">Order online</a></li>
+        <li><a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="nav_order">Order online</a></li>
         <li><button class="lang" type="button" id="lang" lang="he">עברית</button></li>
       </ul>
     </div>
   </header>
 
   <main id="main">
-    <nav class="container crumbs" data-i18n-aria="crumbs">
-      <ol>
-        <li><a href="#" data-i18n="home">Home</a></li>
-        <li><a href="#" data-i18n="nav_boutiques">Boutiques</a></li>
-        <li><a href="#" data-i18n="area">Hasharon Area</a></li>
-        <li><span aria-current="page" data-i18n="city">Ra'anana</span></li>
-      </ol>
-    </nav>
-
-    <!-- Portada con carrusel -->
-    <div class="hero" aria-roledescription="carousel">
-      <div class="slides">
-        <div class="slide active" role="group" aria-roledescription="slide"><div class="ph ph-1"></div></div>
-        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-2"></div></div>
-        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-3"></div></div>
-      </div>
+    <!-- Portada -->
+    <div class="hero home-hero">
+      <div class="slides"><div class="slide active"><div class="ph ph-1"></div></div></div>
       <div class="container hero-content">
-        <span class="zone" data-i18n="area">Hasharon Area</span>
-        <h1 data-i18n="city">Ra'anana</h1>
-        <p data-i18n="hero_line">Fresh croissants, cakes and premium coffee on Ahuza Street.</p>
+        <span class="eyebrow" data-i18n="h_eyebrow">French patisserie &amp; café</span>
+        <h1 data-i18n="h_title">Patisserie like in Paris</h1>
+        <p data-i18n="h_text">Croissants, cakes and pastries baked every day, in boutiques across Israel.</p>
         <div class="actions">
-          <a class="btn btn-white" data-link="gmaps" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            <span data-i18n="get_directions">Get directions</span>
-          </a>
-          <a class="btn btn-outline" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="nav_order">Order online</a>
-        </div>
-      </div>
-      <div class="carousel-ui">
-        <div class="container">
-          <button class="arrow" type="button" id="prev" data-i18n-aria="prev_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
-          <div class="dots" id="dots"></div>
-          <button class="arrow" type="button" id="next" data-i18n-aria="next_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+          <a class="btn btn-white" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="nav_order">Order online</a>
+          <a class="btn btn-outline" href="#find" data-i18n="h_find">Find a boutique</a>
         </div>
       </div>
     </div>
 
-    <div class="container intro">
-      <p data-i18n="intro">Our Ra'anana boutique brings the Boutique Central patisserie to Ahuza Street: croissants baked every morning, cakes, pastries and coffee, from Sunday to Friday.</p>
-      <p class="pending" style="margin-top:14px" data-i18n="intro_pending">Original branch description to be copied from the current website.</p>
-    </div>
-
-    <!-- Información: horario, contacto, mapa -->
-    <section id="info">
+    <!-- Categorías -->
+    <section id="patisserie">
       <div class="container">
-        <h2 data-i18n="info_h">Opening hours &amp; how to get here</h2>
-        <p class="lead" data-i18n="info_sub">Everything you need before you visit.</p>
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="status" id="status" hidden></div>
-
-            <div class="block">
-              <h3 data-i18n="hours_h">Opening hours</h3>
-              <table class="hours">
-                <tbody>
-                  <tr data-days="0,1,2,3,4"><th scope="row" data-i18n="sun_thu">Sun – Thu</th><td>07:00 – 20:00</td></tr>
-                  <tr data-days="5"><th scope="row" data-i18n="fri">Fri &amp; holiday eves</th><td>07:00 – 14:00</td></tr>
-                  <tr data-days="6"><th scope="row" data-i18n="sat">Sat</th><td data-i18n="closed">Closed</td></tr>
-                </tbody>
-              </table>
-              <p class="note" data-i18n="hours_note">⚑ Sample hours from other branches — confirm for Ra'anana.</p>
-            </div>
-
-            <div class="block">
-              <h3 data-i18n="address_h">Address</h3>
-              <p data-i18n="address">124 Ahuza St., Ra'anana</p>
-              <div class="nav-btns">
-                <a class="btn btn-white" data-link="waze" href="#" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a8 8 0 1 1 15.5-2.8c0 3-2 4.8-4.5 5.3"/><circle cx="8" cy="19" r="1.6"/><circle cx="15" cy="19" r="1.6"/><path d="M9.5 10h.01M14.5 10h.01M10 13.5c1.2 1 2.8 1 4 0"/></svg>
-                  Waze
-                </a>
-                <a class="btn btn-white" data-link="gmaps" href="#" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-                  Google Maps
-                </a>
-              </div>
-            </div>
-
-            <div class="block">
-              <h3 data-i18n="phone_h">Phone</h3>
-              <ul class="phones">
-                <li><span class="tag" data-i18n="phone_branch">Boutique</span><span data-i18n="tbc">⚑ To be confirmed</span></li>
-                <li><span class="tag" data-i18n="phone_cs">Customer service</span><a href="tel:1700700061" dir="ltr">1-700-700-061</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="map-wrap">
-            <iframe class="map" id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="map_title" title="Map: Boutique Central Ra'anana"></iframe>
-            <p class="pending" data-i18n="getting_pending">Parking and public transport nearby — to be confirmed.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kashrut -->
-    <section id="kashrut">
-      <div class="container">
-        <h2 data-i18n="kashrut_h">Kashrut</h2>
-        <p class="pending" data-i18n="kashrut_pending">Certificate of this boutique: authority, type (dairy / parve) and PDF — to be provided.</p>
-      </div>
-    </section>
-
-    <!-- Qué pedir -->
-    <section id="order-here">
-      <div class="container">
-        <h2 data-i18n="what_h">What to order here</h2>
-        <p class="lead" data-i18n="what_sub">Favourites from our patisserie.</p>
+        <h2 data-i18n="cat_h">Our patisserie</h2>
+        <p class="lead" data-i18n="cat_sub">Baked fresh every morning, for every moment of the day.</p>
         <div class="cards">
-          <article class="card"><div class="ph ph-1"></div><div class="body"><h3 data-i18n="p1">Butter croissant</h3></div></article>
-          <article class="card"><div class="ph ph-3"></div><div class="body"><h3 data-i18n="p2">Pain au chocolat</h3></div></article>
-          <article class="card"><div class="ph ph-2"></div><div class="body"><h3 data-i18n="p3">Pound cakes &amp; yeast cakes</h3></div></article>
-          <article class="card"><div class="ph ph-4"></div><div class="body"><h3 data-i18n="p4">Fruit tart</h3></div></article>
+          <a class="cat" href="#"><div class="ph ph-1"></div><div class="label"><h3 data-i18n="c1">Croissants &amp; viennoiserie</h3></div></a>
+          <a class="cat" href="#"><div class="ph ph-4"></div><div class="label"><h3 data-i18n="c2">Cakes</h3></div></a>
+          <a class="cat" href="#"><div class="ph ph-2"></div><div class="label"><h3 data-i18n="c3">Pound cakes &amp; yeast cakes</h3></div></a>
+          <a class="cat" href="#events"><div class="ph ph-5"></div><div class="label"><h3 data-i18n="c4">Hospitality trays</h3></div></a>
         </div>
-        <p class="pending" style="margin-top:16px" data-i18n="what_pending">Final selection, photos and prices — to be chosen by the business.</p>
+        <p class="pending" style="margin-top:16px" data-i18n="cat_pending">Category names, links and photos to be taken from the current website.</p>
+      </div>
+    </section>
+
+    <!-- Buscador de sucursales -->
+    <section id="find">
+      <div class="container">
+        <h2 data-i18n="find_h">Find a boutique</h2>
+        <p class="lead" data-i18n="find_sub">Search by city or choose an area.</p>
+        <div class="finder">
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <label class="sr-only" for="q" data-i18n="search_label">Search boutiques</label>
+            <input id="q" type="search" autocomplete="off" data-i18n-ph="search_ph" placeholder="Ra'anana, Tel Aviv…">
+          </div>
+          <div class="chips" id="chips" role="group" data-i18n-aria="find_h"></div>
+        </div>
+        <div class="cards" id="results" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden data-i18n="no_results">No boutiques match your search.</p>
+        <p class="pending" style="margin-top:16px" data-i18n="find_pending">The prototype includes 7 boutiques. The full list (about 40) will come from the website.</p>
       </div>
     </section>
 
@@ -511,54 +102,13 @@
         <div class="panel split">
           <div>
             <h2 data-i18n="cake_h">Order a cake</h2>
-            <p class="lead" style="margin-bottom:12px" data-i18n="cake_p">Celebrating something? Order your cake online and pick it up here, at our Ra'anana boutique.</p>
-            <p class="pending" data-i18n="cake_pending">Minimum notice for orders — to be confirmed.</p>
+            <p class="lead" style="margin-bottom:0" data-i18n="cake_home">Birthdays, holidays or just because: order online and pick it up at the boutique of your choice.</p>
             <div class="actions">
               <a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="cake_btn">Order a cake</a>
             </div>
           </div>
           <div class="ph ph-4"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Galería -->
-    <section id="gallery">
-      <div class="container">
-        <h2 data-i18n="gallery_h">Gallery</h2>
-        <p class="lead" data-i18n="gallery_sub">Tap a photo to see it full screen.</p>
-        <div class="gallery" id="gallery-grid">
-          <button type="button" data-i="0"><div class="ph ph-1"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button" data-i="1"><div class="ph ph-2"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button" data-i="2"><div class="ph ph-3"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button" data-i="3"><div class="ph ph-4"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button" data-i="4"><div class="ph ph-5"><span data-i18n="photo">Photo</span></div></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Servicios del local -->
-    <section id="amenities">
-      <div class="container">
-        <h2 data-i18n="amen_h">At this boutique</h2>
-        <ul class="amenities">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 20v-6h12v6M5 14h14M8 14V6h8v8"/></svg><span data-i18n="a1">Indoor seating</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v11M7 20h10M4 13h16"/></svg><span data-i18n="a2">Outdoor seating</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/></svg><span>Wi‑Fi</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg><span data-i18n="a4">Power outlets</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="4" r="2"/><path d="M11 7v6h5l3 6M11 10h5M8 11a6 6 0 1 0 7.5 7.5"/></svg><span data-i18n="a5">Wheelchair accessible</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 5.2C10 3.4 8.3 2 6.5 2.5 4.8 3 4 5 4.5 6.5M14 5.2c0-1.8 1.7-3.2 3.5-2.7 1.7.5 2.5 2.5 2 4M8 14v2M16 14v2M8.5 8h7a3.5 3.5 0 0 1 3.5 3.5V15a7 7 0 0 1-14 0v-3.5A3.5 3.5 0 0 1 8.5 8z"/></svg><span data-i18n="a6">Dog friendly</span></li>
-        </ul>
-        <p class="pending" data-i18n="amen_pending">Which of these this boutique offers — to be confirmed. Only confirmed items will be shown.</p>
-      </div>
-    </section>
-
-    <!-- Reseñas -->
-    <section id="reviews">
-      <div class="container">
-        <h2 data-i18n="reviews_h">What our guests say</h2>
-        <p class="pending" style="margin-bottom:16px" data-i18n="reviews_pending">3–4 featured reviews (text, name, rating) — to be chosen by the business.</p>
-        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Boutique+Central+Ra%27anana" target="_blank" rel="noopener" data-i18n="reviews_btn">See all reviews on Google</a>
       </div>
     </section>
 
@@ -569,27 +119,35 @@
           <div class="ph ph-5"></div>
           <div>
             <h2 data-i18n="events_h">Events &amp; corporate</h2>
-            <p class="lead" style="margin-bottom:0" data-i18n="events_p">Hospitality trays, cakes and pastries for meetings, celebrations and holidays — with pickup at this boutique.</p>
+            <p class="lead" style="margin-bottom:0" data-i18n="events_home">Hospitality trays, cakes and pastries for meetings, celebrations and holidays.</p>
             <div class="actions">
-              <a class="btn btn-solid" href="https://www.boutiquecentral.co.il/en/events/" data-i18n="events_btn">Events</a>
-              <a class="btn btn-outline" href="#" data-i18n="trays_btn">Hospitality trays</a>
+              <a class="btn btn-solid" data-link="events" href="#" data-i18n="events_btn">Events</a>
+              <a class="btn btn-outline" href="#patisserie" data-i18n="trays_btn">Hospitality trays</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Preguntas frecuentes -->
-    <section id="faq">
+    <!-- Kosher -->
+    <section>
       <div class="container">
-        <h2 data-i18n="faq_h">Frequently asked questions</h2>
-        <p class="lead" data-i18n="faq_sub">Quick answers about this boutique.</p>
-        <div class="faq">
-          <details><summary data-i18n="q1">Are you open on Saturday?</summary><div class="answer" data-i18n="a1q">No. The boutique is closed on Saturday and opens again on Sunday morning.</div></details>
-          <details><summary data-i18n="q2">Can I order a cake for pickup here?</summary><div class="answer" data-i18n="a2q">Yes. Order online and choose pickup at the Ra'anana boutique.</div></details>
-          <details><summary data-i18n="q3">Do you have vegan or gluten‑free options?</summary><div class="answer"><span class="pending" data-i18n="tbc_answer">Answer to be confirmed.</span></div></details>
-          <details><summary data-i18n="q4">Is there seating?</summary><div class="answer"><span class="pending" data-i18n="tbc_answer">Answer to be confirmed.</span></div></details>
+        <h2 data-i18n="kosher_h">Kosher</h2>
+        <p class="pending" data-i18n="kosher_pending">Kosher certification seal and details — to be provided. Each boutique page shows its own certificate.</p>
+      </div>
+    </section>
+
+    <!-- Club -->
+    <section>
+      <div class="container">
+        <div class="club-band">
+          <div>
+            <h2 data-i18n="club_h">Join the Boutique Central club</h2>
+            <p data-i18n="club_p">Join us and get member benefits and news from the patisserie.</p>
+          </div>
+          <a class="btn btn-white" data-link="club" href="#" target="_blank" rel="noopener" data-i18n="club_btn">Join now</a>
         </div>
+        <p class="pending" style="margin-top:16px" data-i18n="club_pending">Which club sign-up is the right one (Tabit or wee.ai)? — to be confirmed.</p>
       </div>
     </section>
 
@@ -600,20 +158,7 @@
           <h2 data-i18n="insta_h">Follow us on Instagram</h2>
           <p class="lead" style="margin:0">@boutique_central</p>
         </div>
-        <a class="btn btn-solid" href="https://www.instagram.com/boutique_central/" target="_blank" rel="noopener" data-i18n="insta_btn">Open Instagram</a>
-      </div>
-    </section>
-
-    <!-- Sucursales cercanas -->
-    <section id="nearby">
-      <div class="container">
-        <h2 data-i18n="nearby_h">Boutiques nearby</h2>
-        <p class="lead" data-i18n="nearby_sub">More Boutique Central in the Hasharon Area.</p>
-        <div class="cards">
-          <a class="card" href="#" style="text-decoration:none"><div class="ph ph-2"></div><div class="body"><h3 data-i18n="n1">Kfar Saba</h3><p data-i18n="n1a">125 Weizmann St., Kfar Saba</p></div></a>
-          <a class="card" href="#" style="text-decoration:none"><div class="ph ph-3"></div><div class="body"><h3 data-i18n="n2">Green Kfar Saba</h3><p data-i18n="addr_tbc">⚑ Address to be confirmed</p></div></a>
-          <a class="card" href="#" style="text-decoration:none"><div class="ph ph-5"></div><div class="body"><h3 data-i18n="n3">Herzliya Center</h3><p data-i18n="addr_tbc">⚑ Address to be confirmed</p></div></a>
-        </div>
+        <a class="btn btn-solid" data-link="instagram" href="#" target="_blank" rel="noopener" data-i18n="insta_btn">Open Instagram</a>
       </div>
     </section>
   </main>
@@ -623,25 +168,17 @@
       <div class="foot-grid">
         <div>
           <h2 data-i18n="all_h">Our boutiques</h2>
-          <div class="zones">
-            <details open><summary data-i18n="z_ta">Tel Aviv</summary><ul><li><a href="#">Dizengoff</a></li><li><a href="#">Sheinkin</a></li></ul></details>
-            <details open><summary data-i18n="z_jer">Jerusalem</summary><ul><li><a href="#">Agripas</a></li></ul></details>
-            <details open><summary data-i18n="area">Hasharon Area</summary><ul><li><a href="#" data-i18n="city">Ra'anana</a></li><li><a href="#" data-i18n="n1">Kfar Saba</a></li><li><a href="#" data-i18n="n2">Green Kfar Saba</a></li><li><a href="#" data-i18n="n3">Herzliya Center</a></li></ul></details>
-            <details open><summary data-i18n="z_center">Center Area</summary><ul><li><a href="#" data-i18n="see_all">See all boutiques</a></li></ul></details>
-            <details open><summary data-i18n="z_jud">Judean Foothills</summary><ul><li><a href="#" data-i18n="see_all">See all boutiques</a></li></ul></details>
-            <details open><summary data-i18n="z_south">South</summary><ul><li><a href="#" data-i18n="see_all">See all boutiques</a></li></ul></details>
-          </div>
+          <div class="zones" id="zones"></div>
           <div class="social">
-            <a href="https://www.instagram.com/boutique_central/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a data-link="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
-            <a data-link="whatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
+            <a data-link="whatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg></a>
           </div>
         </div>
 
         <div>
           <h2 data-i18n="write_h">Write us</h2>
           <form class="contact" id="contact" novalidate>
-            <input type="hidden" name="branch" value="Ra'anana">
             <div class="row2">
               <div><label for="f-name" data-i18n="f_name">Name</label><input id="f-name" name="fname" required autocomplete="name"></div>
               <div><label for="f-phone" data-i18n="f_phone">Phone</label><input id="f-phone" name="fphnumber" type="tel" autocomplete="tel" dir="ltr"></div>
@@ -673,14 +210,6 @@
     </div>
   </footer>
 
-  <!-- Barra fija en móvil -->
-  <nav class="mobile-bar" data-i18n-aria="quick">
-    <a href="tel:1700700061"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-i18n="m_call">Call</span></a>
-    <a data-link="gmaps" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg><span data-i18n="m_dir">Directions</span></a>
-    <a class="primary" data-link="order" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span data-i18n="m_order">Order</span></a>
-    <a data-link="whatsapp" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><span>WhatsApp</span></a>
-  </nav>
-
   <!-- Barra de cookies -->
   <div class="cookie" id="cookie" role="region" data-i18n-aria="cookie_label">
     <div class="container">
@@ -693,7 +222,7 @@
   <div class="modal" id="club" aria-hidden="true">
     <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="club-title">
       <button class="close" type="button" id="club-close" data-i18n-aria="close">×</button>
-      <div class="ph ph-1" data-lazy></div>
+      <div class="ph ph-1"></div>
       <div class="inner">
         <p class="title" id="club-title" data-i18n="club_h">Join the Boutique Central club</p>
         <p data-i18n="club_p">Join us and get member benefits and news from the patisserie.</p>
@@ -702,262 +231,77 @@
     </div>
   </div>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-aria="gallery_h">
-    <button class="close" type="button" id="lb-close" data-i18n-aria="close">×</button>
-    <button class="arrow prev" type="button" id="lb-prev" data-i18n-aria="prev_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <figure id="lb-figure"><div class="ph"></div></figure>
-    <button class="arrow next" type="button" id="lb-next" data-i18n-aria="next_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
-  </div>
-
+  <script src="data.js"></script>
+  <script src="common.js"></script>
   <script>
-    // ---- Datos de la sucursal ----
-    const BRANCH = {
-      addressQuery: "124 Ahuza St, Ra'anana, Israel",
-      // EJEMPLO: horario de otras sucursales; confirmar el de Ra'anana. Día 0 = domingo.
-      hours: { 0: ["07:00", "20:00"], 1: ["07:00", "20:00"], 2: ["07:00", "20:00"], 3: ["07:00", "20:00"], 4: ["07:00", "20:00"], 5: ["07:00", "14:00"], 6: null },
-      links: {
-        order: "https://tabitisrael.co.il/tabit-order?orgName=Boutique%20Central&step=enter",
-        whatsapp: "https://wa.me/972549479712",
-        club: "#" // PENDIENTE: enlace correcto del club (Tabit o wee.ai)
-      }
-    };
-    const q = encodeURIComponent(BRANCH.addressQuery);
-    BRANCH.links.gmaps = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
-    BRANCH.links.waze = `https://waze.com/ul?q=${q}&navigate=yes`;
-    document.querySelectorAll("[data-link]").forEach(a => { a.href = BRANCH.links[a.dataset.link]; });
-    document.getElementById("map").src = `https://www.google.com/maps?q=${q}&output=embed`;
-    document.getElementById("year").textContent = new Date().getFullYear();
+    BC.addHe({
+      h_eyebrow: "פטיסרי ובית קפה צרפתי",
+      h_title: "פטיסרי כמו בפריז",
+      h_text: "קרואסונים, עוגות ומאפים שנאפים כל יום, בבוטיקים ברחבי הארץ.",
+      h_find: "מצאו סניף",
+      cat_h: "הפטיסרי שלנו", cat_sub: "נאפה טרי כל בוקר, לכל רגע ביום.",
+      c1: "קרואסונים ומאפי בוקר", c2: "עוגות", c3: "עוגות בחושות ועוגות שמרים", c4: "מגשי אירוח",
+      cat_pending: "שמות הקטגוריות, הקישורים והתמונות יילקחו מהאתר הנוכחי.",
+      find_h: "מצאו בוטיק", find_sub: "חפשו לפי עיר או בחרו אזור.",
+      search_label: "חיפוש סניפים", search_ph: "רעננה, תל אביב…",
+      all_zones: "הכל", no_results: "לא נמצאו סניפים מתאימים.",
+      find_pending: "באב־הטיפוס יש 7 סניפים. הרשימה המלאה (כ־40) תילקח מהאתר.",
+      cake_h: "הזמנת עוגה", cake_home: "ימי הולדת, חגים או סתם כי בא לכם: הזמינו אונליין ואספו מהבוטיק שתבחרו.", cake_btn: "להזמנת עוגה",
+      events_h: "אירועים ועסקים", events_home: "מגשי אירוח, עוגות ומאפים לישיבות, חגיגות וחגים.",
+      events_btn: "אירועים", trays_btn: "מגשי אירוח",
+      kosher_h: "כשרות", kosher_pending: "חותמת ופרטי תעודת הכשרות — יש לספק. כל עמוד סניף מציג את התעודה שלו.",
+      club_pending: "איזו הרשמה למועדון היא הנכונה (Tabit או wee.ai)? — לאישור.",
+      view_branch: "לעמוד הסניף"
+    });
+    BC.addEn({ all_zones: "All", view_branch: "View boutique" });
 
-    // ---- Textos en inglés y hebreo ----
-    const T = {
-      en: {},
-      he: {
-        skip: "דלג לתוכן",
-        proto: "אב־טיפוס עיצובי · פריטים המסומנים ⚑ דורשים מידע מהעסק",
-        tagline: "פטיסרי כמו בפריז",
-        menu: "תפריט",
-        nav_boutiques: "סניפים", nav_patisserie: "פטיסרי", nav_events: "אירועים", nav_order: "הזמנה אונליין",
-        crumbs: "פירורי לחם", home: "בית", area: "אזור השרון", city: "רעננה",
-        hero_line: "קרואסונים טריים, עוגות וקפה מעולה ברחוב אחוזה.",
-        get_directions: "הוראות הגעה",
-        prev_photo: "התמונה הקודמת", next_photo: "התמונה הבאה",
-        intro: "הבוטיק שלנו ברעננה מביא את הפטיסרי של בוטיק סנטרל לרחוב אחוזה: קרואסונים שנאפים כל בוקר, עוגות, מאפים וקפה, מיום ראשון עד שישי.",
-        intro_pending: "תיאור הסניף המקורי יועתק מהאתר הנוכחי.",
-        info_h: "שעות פתיחה ואיך מגיעים", info_sub: "כל מה שצריך לדעת לפני הביקור.",
-        hours_h: "שעות פתיחה", sun_thu: "א׳ – ה׳", fri: "שישי וערבי חג", sat: "שבת", closed: "סגור",
-        hours_note: "⚑ שעות לדוגמה מסניפים אחרים — יש לאשר לרעננה.",
-        address_h: "כתובת", address: "אחוזה 124, רעננה",
-        phone_h: "טלפון", phone_branch: "הסניף", phone_cs: "שירות לקוחות", tbc: "⚑ לאישור",
-        map_title: "מפה: בוטיק סנטרל רעננה",
-        getting_pending: "חניה ותחבורה ציבורית בסביבה — לאישור.",
-        kashrut_h: "כשרות", kashrut_pending: "תעודת הכשרות של הסניף: גוף מכשיר, סוג (חלבי / פרווה) וקובץ PDF — יש לספק.",
-        what_h: "מה להזמין כאן", what_sub: "האהובים מהפטיסרי שלנו.",
-        p1: "קרואסון חמאה", p2: "פאן או שוקולה", p3: "עוגות בחושות ועוגות שמרים", p4: "טארט פירות",
-        what_pending: "המבחר הסופי, תמונות ומחירים — לבחירת העסק.",
-        cake_h: "הזמנת עוגה", cake_p: "חוגגים משהו? הזמינו עוגה אונליין ואספו אותה כאן, בבוטיק ברעננה.",
-        cake_pending: "זמן הזמנה מראש מינימלי — לאישור.", cake_btn: "להזמנת עוגה",
-        gallery_h: "גלריה", gallery_sub: "לחצו על תמונה כדי לראות אותה במסך מלא.", photo: "תמונה",
-        amen_h: "בסניף", a1: "ישיבה בפנים", a2: "ישיבה בחוץ", a4: "שקעי חשמל", a5: "נגיש לכיסאות גלגלים", a6: "ידידותי לכלבים",
-        amen_pending: "אילו מהשירותים קיימים בסניף — לאישור. יוצגו רק שירותים מאושרים.",
-        reviews_h: "מה אומרים עלינו", reviews_pending: "3–4 ביקורות נבחרות (טקסט, שם, דירוג) — לבחירת העסק.", reviews_btn: "לכל הביקורות בגוגל",
-        events_h: "אירועים ועסקים", events_p: "מגשי אירוח, עוגות ומאפים לישיבות, חגיגות וחגים — באיסוף מהסניף הזה.",
-        events_btn: "אירועים", trays_btn: "מגשי אירוח",
-        faq_h: "שאלות נפוצות", faq_sub: "תשובות מהירות על הסניף.",
-        q1: "האם אתם פתוחים בשבת?", a1q: "לא. הסניף סגור בשבת ונפתח שוב ביום ראשון בבוקר.",
-        q2: "אפשר להזמין עוגה לאיסוף מכאן?", a2q: "כן. הזמינו אונליין ובחרו איסוף מהבוטיק ברעננה.",
-        q3: "יש אפשרויות טבעוניות או ללא גלוטן?", q4: "יש מקומות ישיבה?", tbc_answer: "התשובה לאישור.",
-        insta_h: "עקבו אחרינו באינסטגרם", insta_btn: "לאינסטגרם",
-        nearby_h: "סניפים קרובים", nearby_sub: "עוד בוטיק סנטרל באזור השרון.",
-        n1: "כפר סבא", n1a: "ויצמן 125, כפר סבא", n2: "כפר סבא הירוקה", n3: "הרצליה מרכז", addr_tbc: "⚑ כתובת לאישור",
-        all_h: "הסניפים שלנו", z_ta: "תל אביב", z_jer: "ירושלים", z_center: "אזור המרכז", z_jud: "השפלה", z_south: "דרום", see_all: "לכל הסניפים",
-        write_h: "כתבו לנו", f_name: "שם", f_phone: "טלפון", f_email: "אימייל", f_reason: "נושא", f_msg: "הודעה",
-        r1: "הזמנה", r2: "הזמנת עוגה", r3: "אירועים וקייטרינג", r4: "משוב", r5: "אחר",
-        f_consent: "אני מסכים/ה למדיניות הפרטיות.", f_send: "שליחה",
-        form_ok: "תודה! (אב־טיפוס: הטופס עדיין לא מחובר.)", form_err: "נא למלא שם, אימייל, הודעה ולאשר את מדיניות הפרטיות.",
-        credits: "עיצוב · חוויית משתמש · פיתוח",
-        quick: "פעולות מהירות", m_call: "חיוג", m_dir: "ניווט", m_order: "הזמנה",
-        cookie_label: "הודעת עוגיות", cookie_text: "אנחנו משתמשים בעוגיות כדי לשפר את החוויה שלכם.", privacy: "מדיניות פרטיות", accept: "אישור",
-        close: "סגירה",
-        club_h: "הצטרפו למועדון בוטיק סנטרל", club_p: "הצטרפו וקבלו הטבות חברים ועדכונים מהפטיסרי.", club_btn: "להצטרפות",
-        open_now: "פתוח עכשיו · נסגר ב־{t}", closed_now: "סגור עכשיו · נפתח {d} ב־{t}",
-        today: "היום", tomorrow: "מחר",
-        days: ["ביום ראשון", "ביום שני", "ביום שלישי", "ביום רביעי", "ביום חמישי", "ביום שישי", "בשבת"]
-      }
-    };
-    T.en = {
-      form_ok: "Thank you! (Prototype: the form is not connected yet.)",
-      form_err: "Please fill in name, email, message and accept the privacy policy.",
-      open_now: "Open now · closes at {t}", closed_now: "Closed now · opens {d} at {t}",
-      today: "today", tomorrow: "tomorrow",
-      days: ["on Sunday", "on Monday", "on Tuesday", "on Wednesday", "on Thursday", "on Friday", "on Saturday"]
-    };
-    // Guarda los textos ingleses originales del HTML
-    document.querySelectorAll("[data-i18n]").forEach(el => { T.en[el.dataset.i18n] ??= el.innerHTML; });
-    document.querySelectorAll("[data-i18n-aria]").forEach(el => { T.en[el.dataset.i18nAria] ??= el.getAttribute("aria-label") || el.dataset.i18nAria; });
-    document.querySelectorAll("[data-i18n-title]").forEach(el => { T.en[el.dataset.i18nTitle] ??= el.title; });
-    Object.assign(T.en, { menu: "Menu", crumbs: "Breadcrumb", prev_photo: "Previous photo", next_photo: "Next photo", close: "Close", quick: "Quick actions", cookie_label: "Cookie notice", gallery_h: "Gallery" });
+    // ---- Buscador de sucursales ----
+    const params = new URLSearchParams(location.search);
+    let zoneFilter = BC_ZONES.some(z => z.id === params.get("zone")) ? params.get("zone") : "all";
+    const q = document.getElementById("q"), chips = document.getElementById("chips");
+    const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ'’]/g, "");
 
-    let lang = "en";
-    const t = k => T[lang][k] ?? T.en[k];
-    function setLang(l) {
-      lang = l;
-      document.documentElement.lang = l;
-      document.documentElement.dir = l === "he" ? "rtl" : "ltr";
-      document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
-      document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
-      document.querySelectorAll("[data-i18n-title]").forEach(el => { el.title = t(el.dataset.i18nTitle); });
-      const btn = document.getElementById("lang");
-      btn.textContent = l === "he" ? "English" : "עברית";
-      btn.lang = l === "he" ? "en" : "he";
-      updateStatus();
-      try { localStorage.setItem("bc-lang", l); } catch (e) {}
-    }
-    document.getElementById("lang").addEventListener("click", () => setLang(lang === "en" ? "he" : "en"));
-
-    // ---- Menú móvil ----
-    const burger = document.querySelector(".burger"), menu = document.getElementById("menu");
-    burger.addEventListener("click", () => burger.setAttribute("aria-expanded", menu.classList.toggle("open")));
-
-    // ---- Abierto / cerrado ahora (hora de Israel) ----
-    function nowInIsrael() {
-      const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Jerusalem", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
-        .formatToParts(new Date()).map(x => [x.type, x.value]));
-      return { day: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), min: +p.hour * 60 + +p.minute };
-    }
-    const toMin = s => { const [h, m] = s.split(":"); return +h * 60 + +m; };
-    function updateStatus() {
-      const el = document.getElementById("status");
-      const { day, min } = nowInIsrael();
-      if (day < 0) { el.hidden = true; return; }
-      document.querySelectorAll(".hours tr").forEach(tr => tr.classList.toggle("today", tr.dataset.days.split(",").includes(String(day))));
-      const h = BRANCH.hours[day];
-      if (h && min >= toMin(h[0]) && min < toMin(h[1])) {
-        el.className = "status open"; el.textContent = t("open_now").replace("{t}", h[1]);
-      } else {
-        for (let i = 0; i < 7; i++) {
-          const d = (day + i) % 7, hh = BRANCH.hours[d];
-          if (!hh || (i === 0 && min >= toMin(hh[0]))) continue;
-          const when = i === 0 ? t("today") : i === 1 ? t("tomorrow") : t("days")[d];
-          el.className = "status closed"; el.textContent = t("closed_now").replace("{d}", when).replace("{t}", hh[0]);
-          break;
-        }
-      }
-      el.hidden = false;
-    }
-    setInterval(updateStatus, 60000);
-
-    // ---- Carrusel de la portada ----
-    const slides = [...document.querySelectorAll(".slide")], dots = document.getElementById("dots");
-    let current = 0;
-    function show(i) {
-      current = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => { s.classList.toggle("active", k === current); s.setAttribute("aria-hidden", k !== current); });
-      [...dots.children].forEach((d, k) => d.setAttribute("aria-current", k === current));
-    }
-    if (slides.length < 2) {
-      document.querySelector(".carousel-ui").hidden = true;
-    } else {
-      slides.forEach((_, k) => {
+    function renderChips() {
+      chips.innerHTML = "";
+      [{ id: "all" }, ...BC_ZONES.filter(z => BC_BRANCHES.some(b => b.zone === z.id))].forEach(z => {
         const b = document.createElement("button");
-        b.type = "button"; b.className = "dot"; b.setAttribute("aria-label", `${k + 1} / ${slides.length}`);
-        b.addEventListener("click", () => show(k));
-        dots.appendChild(b);
+        b.type = "button"; b.className = "chip";
+        b.textContent = z.id === "all" ? BC.t("all_zones") : BC.loc(z);
+        b.setAttribute("aria-pressed", z.id === zoneFilter);
+        b.addEventListener("click", () => { zoneFilter = z.id; renderChips(); renderResults(); });
+        chips.appendChild(b);
       });
-      document.getElementById("prev").addEventListener("click", () => show(current - 1));
-      document.getElementById("next").addEventListener("click", () => show(current + 1));
-      show(0);
     }
 
-    // ---- Diálogos accesibles (foco atrapado, Esc, clic fuera) ----
-    let lastFocus = null, activeDialog = null;
-    function openDialog(el, focusEl) {
-      lastFocus = document.activeElement; activeDialog = el;
-      el.classList.add("open"); el.setAttribute("aria-hidden", "false");
-      (focusEl || el.querySelector("button, a")).focus();
+    function renderResults() {
+      const box = document.getElementById("results"), term = norm(q.value.trim());
+      const list = BC_BRANCHES.filter(b => {
+        if (zoneFilter !== "all" && b.zone !== zoneFilter) return false;
+        if (!term) return true;
+        const zone = BC_ZONES.find(z => z.id === b.zone);
+        const hay = [b.name.en, b.name.he, zone.en, zone.he, b.address?.en, b.address?.he].filter(Boolean).map(norm).join(" ");
+        return hay.includes(term);
+      });
+      box.innerHTML = "";
+      document.getElementById("empty").hidden = list.length > 0;
+      list.forEach((b, i) => {
+        const zone = BC_ZONES.find(z => z.id === b.zone);
+        const st = BC.hoursStatus(b.hours);
+        const a = document.createElement("a");
+        a.className = "card branch-card"; a.href = BC.branchUrl(b.slug);
+        a.innerHTML = `<div class="ph ph-${(i % 5) + 1}"></div><div class="body"><span class="zone-tag"></span><h3></h3><p class="addr"></p>${st ? '<span class="mini-status"></span>' : ""}</div>`;
+        a.querySelector(".zone-tag").textContent = BC.loc(zone);
+        a.querySelector("h3").textContent = BC.loc(b.name);
+        a.querySelector(".addr").textContent = BC.loc(b.address) || BC.t("addr_missing");
+        if (st) { const s = a.querySelector(".mini-status"); s.classList.add(st.cls); s.textContent = st.text; }
+        box.appendChild(a);
+      });
     }
-    function closeDialog() {
-      if (!activeDialog) return;
-      activeDialog.classList.remove("open"); activeDialog.setAttribute("aria-hidden", "true");
-      activeDialog = null;
-      if (lastFocus) lastFocus.focus();
-    }
-    document.addEventListener("keydown", e => {
-      if (!activeDialog) return;
-      if (e.key === "Escape") closeDialog();
-      if (e.key === "Tab") {
-        const f = [...activeDialog.querySelectorAll("button, a[href]")].filter(x => x.offsetParent !== null);
-        if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
-        else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
-      }
-      if (activeDialog === lightbox && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {
-        const forward = (e.key === "ArrowRight") !== (document.documentElement.dir === "rtl");
-        lbShow(lbIndex + (forward ? 1 : -1));
-      }
-    });
 
-    // ---- Galería con visor a pantalla completa ----
-    const lightbox = document.getElementById("lightbox"), lbFig = document.querySelector("#lb-figure .ph");
-    const thumbs = [...document.querySelectorAll("#gallery-grid button")];
-    let lbIndex = 0;
-    function lbShow(i) {
-      lbIndex = (i + thumbs.length) % thumbs.length;
-      lbFig.className = thumbs[lbIndex].querySelector(".ph").className;
-      lbFig.innerHTML = thumbs[lbIndex].querySelector(".ph").innerHTML;
-    }
-    thumbs.forEach((b, i) => {
-      b.setAttribute("aria-label", `Boutique Central Ra'anana – ${i + 1} / ${thumbs.length}`);
-      b.addEventListener("click", () => { lbShow(i); openDialog(lightbox, document.getElementById("lb-close")); });
-    });
-    document.getElementById("lb-close").addEventListener("click", closeDialog);
-    document.getElementById("lb-prev").addEventListener("click", () => lbShow(lbIndex - 1));
-    document.getElementById("lb-next").addEventListener("click", () => lbShow(lbIndex + 1));
-    lightbox.addEventListener("click", e => { if (e.target === lightbox) closeDialog(); });
+    q.addEventListener("input", renderResults);
+    BC.onLang(() => { renderChips(); renderResults(); });
 
-    // ---- Cookies y club: nunca a la vez ----
-    const store = {
-      get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
-      set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-    };
-    const cookie = document.getElementById("cookie"), club = document.getElementById("club");
-    const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
-    const clubSeen = () => Date.now() - Number(store.get("bc-club-seen") || 0) < THIRTY_DAYS;
-    let clubTimer = null;
-
-    function showClub() {
-      if (clubSeen() || cookie.classList.contains("show") || activeDialog) return;
-      store.set("bc-club-seen", String(Date.now()));
-      openDialog(club, document.getElementById("club-close"));
-    }
-    function armClub() {
-      if (clubSeen()) return;
-      clubTimer = setTimeout(showClub, 30000);
-      if (matchMedia("(pointer: fine)").matches) {
-        document.addEventListener("mouseout", function exit(e) {
-          if (!e.relatedTarget && e.clientY <= 0) { document.removeEventListener("mouseout", exit); clearTimeout(clubTimer); showClub(); }
-        });
-      }
-    }
-    if (store.get("bc-cookies") !== "ok") cookie.classList.add("show");
-    else armClub();
-    document.getElementById("cookie-ok").addEventListener("click", () => {
-      store.set("bc-cookies", "ok"); cookie.classList.remove("show"); armClub();
-    });
-    document.getElementById("club-close").addEventListener("click", closeDialog);
-    club.addEventListener("click", e => { if (e.target === club) closeDialog(); });
-
-    // ---- Formulario (prototipo) ----
-    document.getElementById("contact").addEventListener("submit", e => {
-      e.preventDefault();
-      const f = e.target, ok = f.checkValidity();
-      document.getElementById("form-msg").textContent = ok ? t("form_ok") : t("form_err");
-      if (ok) f.reset();
-    });
-
-    // ---- Idioma inicial ----
-    let saved = null;
-    try { saved = localStorage.getItem("bc-lang"); } catch (e) {}
-    const urlLang = new URLSearchParams(location.search).get("lang");
-    setLang(urlLang === "he" || urlLang === "en" ? urlLang : saved === "he" ? "he" : "en");
+    BC.init();
   </script>
 </body>
 </html>

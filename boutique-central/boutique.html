@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique Central – Patisserie &amp; Café</title>
+  <meta name="description" content="Boutique Central patisserie and café: address, opening hours, directions and online ordering.">
+  <meta property="og:type" content="business.business">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script id="ld" type="application/ld+json"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="proto" data-i18n="proto">Design prototype · items marked ⚑ need information from the business</div>
+
+  <header class="site">
+    <div class="container bar">
+      <a class="logo" href="index.html">
+        <b>Boutique Central</b>
+        <small data-i18n="tagline">Patisserie like in Paris</small>
+      </a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" data-i18n-aria="menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html#find" data-i18n="nav_boutiques">Boutiques</a></li>
+        <li><a href="index.html#patisserie" data-i18n="nav_patisserie">Patisserie</a></li>
+        <li><a href="#events" data-i18n="nav_events">Events</a></li>
+        <li><a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="nav_order">Order online</a></li>
+        <li><button class="lang" type="button" id="lang" lang="he">עברית</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="container crumbs" data-i18n-aria="crumbs">
+      <ol>
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="index.html#find" data-i18n="nav_boutiques">Boutiques</a></li>
+        <li><a href="#" data-b="zoneName" id="crumb-zone"></a></li>
+        <li><span aria-current="page" data-b="city"></span></li>
+      </ol>
+    </nav>
+
+    <!-- Portada con carrusel -->
+    <div class="hero" aria-roledescription="carousel">
+      <div class="slides">
+        <div class="slide active" role="group" aria-roledescription="slide"><div class="ph ph-1"></div></div>
+        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-2"></div></div>
+        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-3"></div></div>
+      </div>
+      <div class="container hero-content">
+        <span class="zone" data-b="zoneName"></span>
+        <h1 data-b="city"></h1>
+        <p data-b="heroLine"></p>
+        <div class="actions">
+          <a class="btn btn-white" data-link="gmaps" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span data-i18n="get_directions">Get directions</span>
+          </a>
+          <a class="btn btn-outline" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="nav_order">Order online</a>
+        </div>
+      </div>
+      <div class="carousel-ui">
+        <div class="container">
+          <button class="arrow" type="button" id="prev" data-i18n-aria="prev_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <div class="dots" id="dots"></div>
+          <button class="arrow" type="button" id="next" data-i18n-aria="next_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container intro">
+      <p data-b="intro"></p>
+      <p class="pending" style="margin-top:14px" data-i18n="intro_pending">Original branch description to be copied from the current website.</p>
+    </div>
+
+    <!-- Información: horario, contacto, mapa -->
+    <section id="info">
+      <div class="container">
+        <h2 data-i18n="info_h">Opening hours &amp; how to get here</h2>
+        <p class="lead" data-i18n="info_sub">Everything you need before you visit.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="status" id="status" hidden></div>
+
+            <div class="block">
+              <h3 data-i18n="hours_h">Opening hours</h3>
+              <table class="hours"><tbody id="hours"></tbody></table>
+              <p class="note" id="hours-note"></p>
+            </div>
+
+            <div class="block">
+              <h3 data-i18n="address_h">Address</h3>
+              <p data-b="address"></p>
+              <div class="nav-btns" id="nav-btns">
+                <a class="btn btn-white" data-link="waze" href="#" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a8 8 0 1 1 15.5-2.8c0 3-2 4.8-4.5 5.3"/><circle cx="8" cy="19" r="1.6"/><circle cx="15" cy="19" r="1.6"/><path d="M9.5 10h.01M14.5 10h.01M10 13.5c1.2 1 2.8 1 4 0"/></svg>
+                  Waze
+                </a>
+                <a class="btn btn-white" data-link="gmaps" href="#" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                  Google Maps
+                </a>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3 data-i18n="phone_h">Phone</h3>
+              <ul class="phones">
+                <li><span class="tag" data-i18n="phone_branch">Boutique</span><span data-i18n="tbc">⚑ To be confirmed</span></li>
+                <li><span class="tag" data-i18n="phone_cs">Customer service</span><a href="tel:1700700061" dir="ltr">1-700-700-061</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="map-wrap">
+            <iframe class="map" id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="pending" data-i18n="getting_pending">Parking and public transport nearby — to be confirmed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kashrut -->
+    <section id="kashrut">
+      <div class="container">
+        <h2 data-i18n="kashrut_h">Kashrut</h2>
+        <p class="pending" data-i18n="kashrut_pending">Certificate of this boutique: authority, type (dairy / parve) and PDF — to be provided.</p>
+      </div>
+    </section>
+
+    <!-- Qué pedir -->
+    <section id="order-here">
+      <div class="container">
+        <h2 data-i18n="what_h">What to order here</h2>
+        <p class="lead" data-i18n="what_sub">Favourites from our patisserie.</p>
+        <div class="cards">
+          <article class="card"><div class="ph ph-1"></div><div class="body"><h3 data-i18n="p1">Butter croissant</h3></div></article>
+          <article class="card"><div class="ph ph-3"></div><div class="body"><h3 data-i18n="p2">Pain au chocolat</h3></div></article>
+          <article class="card"><div class="ph ph-2"></div><div class="body"><h3 data-i18n="p3">Pound cakes &amp; yeast cakes</h3></div></article>
+          <article class="card"><div class="ph ph-4"></div><div class="body"><h3 data-i18n="p4">Fruit tart</h3></div></article>
+        </div>
+        <p class="pending" style="margin-top:16px" data-i18n="what_pending">Final selection, photos and prices — to be chosen by the business.</p>
+      </div>
+    </section>
+
+    <!-- Encargar pastel -->
+    <section id="cake">
+      <div class="container">
+        <div class="panel split">
+          <div>
+            <h2 data-i18n="cake_h">Order a cake</h2>
+            <p class="lead" style="margin-bottom:12px" data-b="cakeText"></p>
+            <p class="pending" data-i18n="cake_pending">Minimum notice for orders — to be confirmed.</p>
+            <div class="actions">
+              <a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="cake_btn">Order a cake</a>
+            </div>
+          </div>
+          <div class="ph ph-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery">
+      <div class="container">
+        <h2 data-i18n="gallery_h">Gallery</h2>
+        <p class="lead" data-i18n="gallery_sub">Tap a photo to see it full screen.</p>
+        <div class="gallery" id="gallery-grid">
+          <button type="button"><div class="ph ph-1"><span data-i18n="photo">Photo</span></div></button>
+          <button type="button"><div class="ph ph-2"><span data-i18n="photo">Photo</span></div></button>
+          <button type="button"><div class="ph ph-3"><span data-i18n="photo">Photo</span></div></button>
+          <button type="button"><div class="ph ph-4"><span data-i18n="photo">Photo</span></div></button>
+          <button type="button"><div class="ph ph-5"><span data-i18n="photo">Photo</span></div></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios del local -->
+    <section id="amenities">
+      <div class="container">
+        <h2 data-i18n="amen_h">At this boutique</h2>
+        <ul class="amenities">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 20v-6h12v6M5 14h14M8 14V6h8v8"/></svg><span data-i18n="am1">Indoor seating</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v11M7 20h10M4 13h16"/></svg><span data-i18n="am2">Outdoor seating</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/></svg><span>Wi‑Fi</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg><span data-i18n="am4">Power outlets</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="4" r="2"/><path d="M11 7v6h5l3 6M11 10h5M8 11a6 6 0 1 0 7.5 7.5"/></svg><span data-i18n="am5">Wheelchair accessible</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 5.2C10 3.4 8.3 2 6.5 2.5 4.8 3 4 5 4.5 6.5M14 5.2c0-1.8 1.7-3.2 3.5-2.7 1.7.5 2.5 2.5 2 4M8 14v2M16 14v2M8.5 8h7a3.5 3.5 0 0 1 3.5 3.5V15a7 7 0 0 1-14 0v-3.5A3.5 3.5 0 0 1 8.5 8z"/></svg><span data-i18n="am6">Dog friendly</span></li>
+        </ul>
+        <p class="pending" data-i18n="amen_pending">Which of these this boutique offers — to be confirmed. Only confirmed items will be shown.</p>
+      </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section id="reviews">
+      <div class="container">
+        <h2 data-i18n="reviews_h">What our guests say</h2>
+        <p class="pending" style="margin-bottom:16px" data-i18n="reviews_pending">3–4 featured reviews (text, name, rating) — to be chosen by the business.</p>
+        <a class="btn btn-outline" id="reviews-link" href="#" target="_blank" rel="noopener" data-i18n="reviews_btn">See all reviews on Google</a>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="events">
+      <div class="container">
+        <div class="panel split">
+          <div class="ph ph-5"></div>
+          <div>
+            <h2 data-i18n="events_h">Events &amp; corporate</h2>
+            <p class="lead" style="margin-bottom:0" data-i18n="events_p">Hospitality trays, cakes and pastries for meetings, celebrations and holidays — with pickup at this boutique.</p>
+            <div class="actions">
+              <a class="btn btn-solid" data-link="events" href="#" data-i18n="events_btn">Events</a>
+              <a class="btn btn-outline" href="index.html#patisserie" data-i18n="trays_btn">Hospitality trays</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="faq">
+      <div class="container">
+        <h2 data-i18n="faq_h">Frequently asked questions</h2>
+        <p class="lead" data-i18n="faq_sub">Quick answers about this boutique.</p>
+        <div class="faq">
+          <details><summary data-i18n="q1">Are you open on Saturday?</summary><div class="answer" data-i18n="a1q">No. The boutique is closed on Saturday and opens again on Sunday morning.</div></details>
+          <details><summary data-i18n="q2">Can I order a cake for pickup here?</summary><div class="answer" data-b="a2q"></div></details>
+          <details><summary data-i18n="q3">Do you have vegan or gluten‑free options?</summary><div class="answer"><span class="pending" data-i18n="tbc_answer">Answer to be confirmed.</span></div></details>
+          <details><summary data-i18n="q4">Is there seating?</summary><div class="answer"><span class="pending" data-i18n="tbc_answer">Answer to be confirmed.</span></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section>
+      <div class="container insta">
+        <div>
+          <h2 data-i18n="insta_h">Follow us on Instagram</h2>
+          <p class="lead" style="margin:0">@boutique_central</p>
+        </div>
+        <a class="btn btn-solid" data-link="instagram" href="#" target="_blank" rel="noopener" data-i18n="insta_btn">Open Instagram</a>
+      </div>
+    </section>
+
+    <!-- Sucursales cercanas -->
+    <section id="nearby">
+      <div class="container">
+        <h2 data-i18n="nearby_h">Boutiques nearby</h2>
+        <p class="lead" data-b="nearbySub"></p>
+        <div class="cards" id="nearby-cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <h2 data-i18n="all_h">Our boutiques</h2>
+          <div class="zones" id="zones"></div>
+          <div class="social">
+            <a data-link="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+            <a data-link="whatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h2 data-i18n="write_h">Write us</h2>
+          <form class="contact" id="contact" novalidate>
+            <input type="hidden" name="branch" id="branch-field">
+            <div class="row2">
+              <div><label for="f-name" data-i18n="f_name">Name</label><input id="f-name" name="fname" required autocomplete="name"></div>
+              <div><label for="f-phone" data-i18n="f_phone">Phone</label><input id="f-phone" name="fphnumber" type="tel" autocomplete="tel" dir="ltr"></div>
+            </div>
+            <div class="row2">
+              <div><label for="f-email" data-i18n="f_email">Email</label><input id="f-email" name="femail" type="email" required autocomplete="email" dir="ltr"></div>
+              <div>
+                <label for="f-reason" data-i18n="f_reason">Reason</label>
+                <select id="f-reason" name="fsubject">
+                  <option data-i18n="r1">Order</option>
+                  <option data-i18n="r2">Cake order</option>
+                  <option data-i18n="r3">Events &amp; catering</option>
+                  <option data-i18n="r4">Feedback</option>
+                  <option data-i18n="r5">Other</option>
+                </select>
+              </div>
+            </div>
+            <div><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="fmsgarea" required></textarea></div>
+            <label class="check"><input type="checkbox" name="chk[]" required><span data-i18n="f_consent">I agree to the privacy policy.</span></label>
+            <div><button class="btn btn-white" type="submit" data-i18n="f_send">Send</button></div>
+            <p class="form-msg" id="form-msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="year"></span> Boutique Central</span>
+        <span data-i18n="credits">Design · UX · Development</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra fija en móvil -->
+  <nav class="mobile-bar" data-i18n-aria="quick">
+    <a href="tel:1700700061"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-i18n="m_call">Call</span></a>
+    <a data-link="gmaps" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg><span data-i18n="m_dir">Directions</span></a>
+    <a class="primary" data-link="order" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span data-i18n="m_order">Order</span></a>
+    <a data-link="whatsapp" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><span>WhatsApp</span></a>
+  </nav>
+
+  <!-- Barra de cookies -->
+  <div class="cookie" id="cookie" role="region" data-i18n-aria="cookie_label">
+    <div class="container">
+      <span><span data-i18n="cookie_text">We use cookies to improve your experience.</span> <a href="#" data-i18n="privacy">Privacy policy</a></span>
+      <button class="btn btn-white" type="button" id="cookie-ok" data-i18n="accept">Accept</button>
+    </div>
+  </div>
+
+  <!-- Ventana del club -->
+  <div class="modal" id="club" aria-hidden="true">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="club-title">
+      <button class="close" type="button" id="club-close" data-i18n-aria="close">×</button>
+      <div class="ph ph-1"></div>
+      <div class="inner">
+        <p class="title" id="club-title" data-i18n="club_h">Join the Boutique Central club</p>
+        <p data-i18n="club_p">Join us and get member benefits and news from the patisserie.</p>
+        <a class="btn btn-solid" data-link="club" href="#" target="_blank" rel="noopener" data-i18n="club_btn">Join now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-aria="gallery_h">
+    <button class="close" type="button" id="lb-close" data-i18n-aria="close">×</button>
+    <button class="arrow prev" type="button" id="lb-prev" data-i18n-aria="prev_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <figure id="lb-figure"><div class="ph"></div></figure>
+    <button class="arrow next" type="button" id="lb-next" data-i18n-aria="next_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script>
+    // ---- Sucursal elegida por ?b=<slug> ----
+    const slug = new URLSearchParams(location.search).get("b") || "raanana";
+    const B = BC_BRANCHES.find(b => b.slug === slug) || BC_BRANCHES[0];
+    const zone = BC_ZONES.find(z => z.id === B.zone);
+
+    const mapQuery = encodeURIComponent(B.address ? `${B.address.en}, Israel` : `Boutique Central ${B.name.en}, Israel`);
+    BC.links.gmaps = `https://www.google.com/maps/dir/?api=1&destination=${mapQuery}`;
+    BC.links.waze = `https://waze.com/ul?q=${mapQuery}&navigate=yes`;
+    document.getElementById("map").src = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+    document.getElementById("reviews-link").href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Boutique Central " + B.name.en)}`;
+    document.getElementById("branch-field").value = B.name.en;
+    document.getElementById("crumb-zone").href = `index.html?zone=${B.zone}#find`;
+
+    BC.addEn({
+      hero_on: "Fresh croissants, cakes and premium coffee on {street}.",
+      hero_in: "Fresh croissants, cakes and premium coffee in {city}.",
+      intro: "Our {city} boutique brings the Boutique Central patisserie to you: croissants baked every morning, cakes, pastries and coffee, from Sunday to Friday.",
+      cake: "Celebrating something? Order your cake online and pick it up here, at our {city} boutique.",
+      a2q: "Yes. Order online and choose pickup at the {city} boutique.",
+      nearby_sub: "More Boutique Central in the {zone}.",
+      sun_thu: "Sun – Thu", fri: "Fri &amp; holiday eves", sat: "Sat", closed: "Closed",
+      hours_note: "⚑ Hours from public listings — confirm with the boutique.",
+      hours_missing: "⚑ Opening hours to be confirmed.",
+      map_title: "Map: Boutique Central {city}",
+      title: "Boutique Central {city} – Patisserie & Café",
+      gallery_alt: "Boutique Central {city} – pastries on display"
+    });
+    BC.addHe({
+      hero_on: "קרואסונים טריים, עוגות וקפה מעולה ב{street}.",
+      hero_in: "קרואסונים טריים, עוגות וקפה מעולה ב{city}.",
+      intro: "הבוטיק שלנו ב{city} מביא אליכם את הפטיסרי של בוטיק סנטרל: קרואסונים שנאפים כל בוקר, עוגות, מאפים וקפה, מיום ראשון עד שישי.",
+      intro_pending: "תיאור הסניף המקורי יועתק מהאתר הנוכחי.",
+      cake: "חוגגים משהו? הזמינו עוגה אונליין ואספו אותה כאן, בבוטיק ב{city}.",
+      a2q: "כן. הזמינו אונליין ובחרו איסוף מהבוטיק ב{city}.",
+      nearby_sub: "עוד בוטיק סנטרל ב{zone}.",
+      info_h: "שעות פתיחה ואיך מגיעים", info_sub: "כל מה שצריך לדעת לפני הביקור.",
+      hours_h: "שעות פתיחה", sun_thu: "א׳ – ה׳", fri: "שישי וערבי חג", sat: "שבת", closed: "סגור",
+      hours_note: "⚑ שעות ממקורות ציבוריים — יש לאשר מול הסניף.",
+      hours_missing: "⚑ שעות פתיחה לאישור.",
+      address_h: "כתובת", phone_h: "טלפון", phone_branch: "הסניף", phone_cs: "שירות לקוחות",
+      map_title: "מפה: בוטיק סנטרל {city}",
+      getting_pending: "חניה ותחבורה ציבורית בסביבה — לאישור.",
+      kashrut_h: "כשרות", kashrut_pending: "תעודת הכשרות של הסניף: גוף מכשיר, סוג (חלבי / פרווה) וקובץ PDF — יש לספק.",
+      what_h: "מה להזמין כאן", what_sub: "האהובים מהפטיסרי שלנו.",
+      p1: "קרואסון חמאה", p2: "פאן או שוקולה", p3: "עוגות בחושות ועוגות שמרים", p4: "טארט פירות",
+      what_pending: "המבחר הסופי, תמונות ומחירים — לבחירת העסק.",
+      cake_h: "הזמנת עוגה", cake_pending: "זמן הזמנה מראש מינימלי — לאישור.", cake_btn: "להזמנת עוגה",
+      gallery_h: "גלריה", gallery_sub: "לחצו על תמונה כדי לראות אותה במסך מלא.",
+      amen_h: "בסניף", am1: "ישיבה בפנים", am2: "ישיבה בחוץ", am4: "שקעי חשמל", am5: "נגיש לכיסאות גלגלים", am6: "ידידותי לכלבים",
+      amen_pending: "אילו מהשירותים קיימים בסניף — לאישור. יוצגו רק שירותים מאושרים.",
+      reviews_h: "מה אומרים עלינו", reviews_pending: "3–4 ביקורות נבחרות (טקסט, שם, דירוג) — לבחירת העסק.", reviews_btn: "לכל הביקורות בגוגל",
+      events_h: "אירועים ועסקים", events_p: "מגשי אירוח, עוגות ומאפים לישיבות, חגיגות וחגים — באיסוף מהסניף הזה.",
+      events_btn: "אירועים", trays_btn: "מגשי אירוח",
+      faq_h: "שאלות נפוצות", faq_sub: "תשובות מהירות על הסניף.",
+      q1: "האם אתם פתוחים בשבת?", a1q: "לא. הסניף סגור בשבת ונפתח שוב ביום ראשון בבוקר.",
+      q2: "אפשר להזמין עוגה לאיסוף מכאן?",
+      q3: "יש אפשרויות טבעוניות או ללא גלוטן?", q4: "יש מקומות ישיבה?", tbc_answer: "התשובה לאישור.",
+      nearby_h: "סניפים קרובים",
+      title: "בוטיק סנטרל {city} – פטיסרי ובית קפה",
+      gallery_alt: "בוטיק סנטרל {city} – מאפים בוויטרינה"
+    });
+
+    const fill = s => s.replace("{city}", BC.loc(B.name)).replace("{street}", BC.loc(B.street) || "").replace("{zone}", BC.loc(zone));
+
+    // ---- Horario y estado abierto/cerrado (hora de Israel) ----
+    function renderHours() {
+      const tbody = document.getElementById("hours"), note = document.getElementById("hours-note"), status = document.getElementById("status");
+      tbody.innerHTML = "";
+      if (!B.hours) { note.innerHTML = BC.t("hours_missing"); status.hidden = true; return; }
+      note.innerHTML = BC.t("hours_note");
+      const fmt = h => h ? `${h[0]} – ${h[1]}` : BC.t("closed");
+      [["sun_thu", 0, "0,1,2,3,4"], ["fri", 5, "5"], ["sat", 6, "6"]].forEach(([k, d, days]) => {
+        const tr = document.createElement("tr");
+        tr.dataset.days = days;
+        tr.innerHTML = `<th scope="row">${BC.t(k)}</th><td>${fmt(B.hours[d])}</td>`;
+        tbody.appendChild(tr);
+      });
+      updateStatus();
+    }
+    function updateStatus() {
+      const el = document.getElementById("status"), st = BC.hoursStatus(B.hours);
+      el.hidden = !st;
+      if (!st) return;
+      const { day } = BC.nowInIsrael();
+      document.querySelectorAll("#hours tr").forEach(tr => tr.classList.toggle("today", tr.dataset.days.split(",").includes(String(day))));
+      el.className = `status ${st.cls}`; el.textContent = st.text;
+    }
+    setInterval(updateStatus, 60000);
+
+    // ---- Sucursales cercanas: misma zona ----
+    function renderNearby() {
+      const box = document.getElementById("nearby-cards");
+      const list = BC_BRANCHES.filter(b => b.zone === B.zone && b.slug !== B.slug).slice(0, 3);
+      document.getElementById("nearby").hidden = !list.length;
+      box.innerHTML = "";
+      list.forEach((b, i) => {
+        const a = document.createElement("a");
+        a.className = "card"; a.href = BC.branchUrl(b.slug); a.style.textDecoration = "none";
+        a.innerHTML = `<div class="ph ph-${(i % 5) + 2}"></div><div class="body"><h3></h3><p></p></div>`;
+        a.querySelector("h3").textContent = BC.loc(b.name);
+        a.querySelector("p").textContent = BC.loc(b.address) || BC.t("addr_missing");
+        box.appendChild(a);
+      });
+    }
+
+    // ---- Datos estructurados (JSON-LD) ----
+    function renderLd() {
+      const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      const bakery = {
+        "@type": "Bakery",
+        name: `Boutique Central ${B.name.en}`,
+        url: `https://www.boutiquecentral.co.il/en/shop/${B.slug}/`,
+        telephone: "+972-1-700-700-061",
+        servesCuisine: ["French", "Patisserie", "Coffee"],
+        parentOrganization: { "@type": "Organization", name: "Boutique Central", url: "https://www.boutiquecentral.co.il/" }
+      };
+      if (B.address) bakery.address = { "@type": "PostalAddress", streetAddress: B.address.en.split(",")[0], addressLocality: B.address.en.split(",").pop().trim(), addressCountry: "IL" };
+      if (B.hours) bakery.openingHoursSpecification = DAYS.map((d, i) => B.hours[i] && { "@type": "OpeningHoursSpecification", dayOfWeek: d, opens: B.hours[i][0], closes: B.hours[i][1] }).filter(Boolean);
+      const ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+          bakery,
+          { "@type": "BreadcrumbList", itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.boutiquecentral.co.il/en/" },
+            { "@type": "ListItem", position: 2, name: "Boutiques", item: "https://www.boutiquecentral.co.il/en/shop/" },
+            { "@type": "ListItem", position: 3, name: zone.en },
+            { "@type": "ListItem", position: 4, name: B.name.en }
+          ] },
+          { "@type": "FAQPage", mainEntity: [
+            { "@type": "Question", name: "Are you open on Saturday?", acceptedAnswer: { "@type": "Answer", text: "No. The boutique is closed on Saturday." } },
+            { "@type": "Question", name: "Can I order a cake for pickup here?", acceptedAnswer: { "@type": "Answer", text: `Yes. Order online and choose pickup at the ${B.name.en} boutique.` } }
+          ] }
+        ]
+      };
+      document.getElementById("ld").textContent = JSON.stringify(ld);
+    }
+
+    // ---- Textos que dependen de la sucursal ----
+    BC.onLang(() => {
+      const v = {
+        city: BC.loc(B.name),
+        zoneName: BC.loc(zone),
+        address: BC.loc(B.address) || BC.t("addr_missing"),
+        heroLine: fill(BC.t(B.street ? "hero_on" : "hero_in")),
+        intro: fill(BC.t("intro")),
+        cakeText: fill(BC.t("cake")),
+        a2q: fill(BC.t("a2q")),
+        nearbySub: fill(BC.t("nearby_sub"))
+      };
+      document.querySelectorAll("[data-b]").forEach(el => { el.textContent = v[el.dataset.b]; });
+      document.title = fill(BC.t("title"));
+      document.getElementById("map").title = fill(BC.t("map_title"));
+      document.querySelectorAll("#gallery-grid button").forEach((b, i, all) => b.setAttribute("aria-label", `${fill(BC.t("gallery_alt"))} (${i + 1}/${all.length})`));
+      renderHours();
+      renderNearby();
+    });
+    renderLd();
+
+    // ---- Carrusel de la portada ----
+    const slides = [...document.querySelectorAll(".slide")], dots = document.getElementById("dots");
+    let current = 0;
+    function show(i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => { s.classList.toggle("active", k === current); s.setAttribute("aria-hidden", k !== current); });
+      [...dots.children].forEach((d, k) => d.setAttribute("aria-current", k === current));
+    }
+    if (slides.length < 2) {
+      document.querySelector(".carousel-ui").hidden = true;
+    } else {
+      slides.forEach((_, k) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "dot"; b.setAttribute("aria-label", `${k + 1} / ${slides.length}`);
+        b.addEventListener("click", () => show(k));
+        dots.appendChild(b);
+      });
+      document.getElementById("prev").addEventListener("click", () => show(current - 1));
+      document.getElementById("next").addEventListener("click", () => show(current + 1));
+      show(0);
+    }
+
+    // ---- Galería con visor a pantalla completa ----
+    const lightbox = document.getElementById("lightbox"), lbFig = document.querySelector("#lb-figure .ph");
+    const thumbs = [...document.querySelectorAll("#gallery-grid button")];
+    let lbIndex = 0;
+    function lbShow(i) {
+      lbIndex = (i + thumbs.length) % thumbs.length;
+      const src = thumbs[lbIndex].querySelector(".ph");
+      lbFig.className = src.className; lbFig.innerHTML = src.innerHTML;
+    }
+    thumbs.forEach((b, i) => b.addEventListener("click", () => { lbShow(i); BC.openDialog(lightbox, document.getElementById("lb-close")); }));
+    document.getElementById("lb-close").addEventListener("click", BC.closeDialog);
+    document.getElementById("lb-prev").addEventListener("click", () => lbShow(lbIndex - 1));
+    document.getElementById("lb-next").addEventListener("click", () => lbShow(lbIndex + 1));
+    lightbox.addEventListener("click", e => { if (e.target === lightbox) BC.closeDialog(); });
+    document.addEventListener("keydown", e => {
+      if (BC.activeDialog !== lightbox || (e.key !== "ArrowRight" && e.key !== "ArrowLeft")) return;
+      const forward = (e.key === "ArrowRight") !== (document.documentElement.dir === "rtl");
+      lbShow(lbIndex + (forward ? 1 : -1));
+    });
+
+    BC.init();
+  </script>
+</body>
+</html>
