@@ -50,7 +50,7 @@
   <main id="main">
     <!-- Portada -->
     <div class="hero home-hero">
-      <div class="slides"><div class="slide active"><div class="ph ph-1"></div></div></div>
+      <div class="slides"><div class="slide active"><img class="ph" src="img/hero-pastries.jpg" alt=""></div></div>
       <div class="container hero-content">
         <span class="eyebrow" data-i18n="h_eyebrow">French patisserie &amp; café</span>
         <h1 data-i18n="h_title">Patisserie like in Paris</h1>
@@ -68,10 +68,10 @@
         <h2 data-i18n="cat_h">Our patisserie</h2>
         <p class="lead" data-i18n="cat_sub">Baked fresh every morning, for every moment of the day.</p>
         <div class="cards">
-          <a class="cat" href="#"><div class="ph ph-1"></div><div class="label"><h3 data-i18n="c1">Croissants &amp; viennoiserie</h3></div></a>
-          <a class="cat" href="#"><div class="ph ph-4"></div><div class="label"><h3 data-i18n="c2">Cakes</h3></div></a>
-          <a class="cat" href="#"><div class="ph ph-2"></div><div class="label"><h3 data-i18n="c3">Pound cakes &amp; yeast cakes</h3></div></a>
-          <a class="cat" href="#events"><div class="ph ph-5"></div><div class="label"><h3 data-i18n="c4">Hospitality trays</h3></div></a>
+          <a class="cat" href="#"><img class="ph" src="img/products/cat-morning-pastries.jpg" alt="" loading="lazy"><div class="label"><h3 data-i18n="c1">Croissants &amp; viennoiserie</h3></div></a>
+          <a class="cat" href="#"><img class="ph" src="img/products/cat-boutique-cakes.png" alt="" loading="lazy"><div class="label"><h3 data-i18n="c2">Cakes</h3></div></a>
+          <a class="cat" href="#"><img class="ph" src="img/products/cat-yeast-cakes.jpg" alt="" loading="lazy"><div class="label"><h3 data-i18n="c3">Pound cakes &amp; yeast cakes</h3></div></a>
+          <a class="cat" href="#events"><img class="ph" src="img/products/cat-hospitality-trays.jpg" alt="" loading="lazy"><div class="label"><h3 data-i18n="c4">Hospitality trays</h3></div></a>
         </div>
         <p class="pending" style="margin-top:16px" data-i18n="cat_pending">Category names, links and photos to be taken from the current website.</p>
       </div>
@@ -107,7 +107,7 @@
               <a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="cake_btn">Order a cake</a>
             </div>
           </div>
-          <div class="ph ph-4"></div>
+          <img class="ph" src="img/products/birthday-cake.jpg" alt="" loading="lazy">
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@
     <section id="events">
       <div class="container">
         <div class="panel split">
-          <div class="ph ph-5"></div>
+          <img class="ph" src="img/products/hospitality-tray.jpg" alt="" loading="lazy">
           <div>
             <h2 data-i18n="events_h">Events &amp; corporate</h2>
             <p class="lead" style="margin-bottom:0" data-i18n="events_home">Hospitality trays, cakes and pastries for meetings, celebrations and holidays.</p>
@@ -222,7 +222,7 @@
   <div class="modal" id="club" aria-hidden="true">
     <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="club-title">
       <button class="close" type="button" id="club-close" data-i18n-aria="close">×</button>
-      <div class="ph ph-1"></div>
+      <img class="ph" src="img/hero-coffee.jpg" alt="" loading="lazy">
       <div class="inner">
         <p class="title" id="club-title" data-i18n="club_h">Join the Boutique Central club</p>
         <p data-i18n="club_p">Join us and get member benefits and news from the patisserie.</p>
@@ -289,7 +289,7 @@
         const st = BC.hoursStatus(b.hours);
         const a = document.createElement("a");
         a.className = "card branch-card"; a.href = BC.branchUrl(b.slug);
-        a.innerHTML = `<div class="ph ph-${(i % 5) + 1}"></div><div class="body"><span class="zone-tag"></span><h3></h3><p class="addr"></p>${st ? '<span class="mini-status"></span>' : ""}</div>`;
+        a.innerHTML = `<img class="ph" src="${BC.branchImg(b.slug, "card")}" alt="" loading="lazy"><div class="body"><span class="zone-tag"></span><h3></h3><p class="addr"></p>${st ? '<span class="mini-status"></span>' : ""}</div>`;
         a.querySelector(".zone-tag").textContent = BC.loc(zone);
         a.querySelector("h3").textContent = BC.loc(b.name);
         a.querySelector(".addr").textContent = BC.loc(b.address) || BC.t("addr_missing");

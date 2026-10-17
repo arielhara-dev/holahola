@@ -48,9 +48,9 @@
     <!-- Portada con carrusel -->
     <div class="hero" aria-roledescription="carousel">
       <div class="slides">
-        <div class="slide active" role="group" aria-roledescription="slide"><div class="ph ph-1"></div></div>
-        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-2"></div></div>
-        <div class="slide" role="group" aria-roledescription="slide"><div class="ph ph-3"></div></div>
+        <div class="slide active" role="group" aria-roledescription="slide"><img class="ph" data-bimg="header" alt=""></div>
+        <div class="slide" role="group" aria-roledescription="slide"><img class="ph" data-bimg="4" alt=""></div>
+        <div class="slide" role="group" aria-roledescription="slide"><img class="ph" data-bimg="5" alt=""></div>
       </div>
       <div class="container hero-content">
         <span class="zone" data-b="zoneName"></span>
@@ -139,10 +139,10 @@
         <h2 data-i18n="what_h">What to order here</h2>
         <p class="lead" data-i18n="what_sub">Favourites from our patisserie.</p>
         <div class="cards">
-          <article class="card"><div class="ph ph-1"></div><div class="body"><h3 data-i18n="p1">Butter croissant</h3></div></article>
-          <article class="card"><div class="ph ph-3"></div><div class="body"><h3 data-i18n="p2">Pain au chocolat</h3></div></article>
-          <article class="card"><div class="ph ph-2"></div><div class="body"><h3 data-i18n="p3">Pound cakes &amp; yeast cakes</h3></div></article>
-          <article class="card"><div class="ph ph-4"></div><div class="body"><h3 data-i18n="p4">Fruit tart</h3></div></article>
+          <article class="card"><img class="ph" src="img/products/butter-croissant.jpg" alt="" loading="lazy"><div class="body"><h3 data-i18n="p1">Butter croissant</h3></div></article>
+          <article class="card"><img class="ph" src="img/products/chocolate-croissant.jpg" alt="" loading="lazy"><div class="body"><h3 data-i18n="p2">Pain au chocolat</h3></div></article>
+          <article class="card"><img class="ph" src="img/products/chocolate-krantz.jpg" alt="" loading="lazy"><div class="body"><h3 data-i18n="p3">Pound cakes &amp; yeast cakes</h3></div></article>
+          <article class="card"><img class="ph" src="img/products/mini-tarts.jpg" alt="" loading="lazy"><div class="body"><h3 data-i18n="p4">Fruit tart</h3></div></article>
         </div>
         <p class="pending" style="margin-top:16px" data-i18n="what_pending">Final selection, photos and prices — to be chosen by the business.</p>
       </div>
@@ -160,7 +160,7 @@
               <a class="btn btn-solid" data-link="order" href="#" target="_blank" rel="noopener" data-i18n="cake_btn">Order a cake</a>
             </div>
           </div>
-          <div class="ph ph-4"></div>
+          <img class="ph" src="img/products/birthday-cake.jpg" alt="" loading="lazy">
         </div>
       </div>
     </section>
@@ -171,11 +171,11 @@
         <h2 data-i18n="gallery_h">Gallery</h2>
         <p class="lead" data-i18n="gallery_sub">Tap a photo to see it full screen.</p>
         <div class="gallery" id="gallery-grid">
-          <button type="button"><div class="ph ph-1"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button"><div class="ph ph-2"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button"><div class="ph ph-3"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button"><div class="ph ph-4"><span data-i18n="photo">Photo</span></div></button>
-          <button type="button"><div class="ph ph-5"><span data-i18n="photo">Photo</span></div></button>
+          <button type="button"><img class="ph" data-bimg="1" alt="" loading="lazy"></button>
+          <button type="button"><img class="ph" data-bimg="2" alt="" loading="lazy"></button>
+          <button type="button"><img class="ph" data-bimg="3" alt="" loading="lazy"></button>
+          <button type="button"><img class="ph" data-bimg="4" alt="" loading="lazy"></button>
+          <button type="button"><img class="ph" data-bimg="5" alt="" loading="lazy"></button>
         </div>
       </div>
     </section>
@@ -209,7 +209,7 @@
     <section id="events">
       <div class="container">
         <div class="panel split">
-          <div class="ph ph-5"></div>
+          <img class="ph" src="img/products/hospitality-tray.jpg" alt="" loading="lazy">
           <div>
             <h2 data-i18n="events_h">Events &amp; corporate</h2>
             <p class="lead" style="margin-bottom:0" data-i18n="events_p">Hospitality trays, cakes and pastries for meetings, celebrations and holidays — with pickup at this boutique.</p>
@@ -325,7 +325,7 @@
   <div class="modal" id="club" aria-hidden="true">
     <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="club-title">
       <button class="close" type="button" id="club-close" data-i18n-aria="close">×</button>
-      <div class="ph ph-1"></div>
+      <img class="ph" src="img/hero-coffee.jpg" alt="" loading="lazy">
       <div class="inner">
         <p class="title" id="club-title" data-i18n="club_h">Join the Boutique Central club</p>
         <p data-i18n="club_p">Join us and get member benefits and news from the patisserie.</p>
@@ -337,7 +337,7 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-aria="gallery_h">
     <button class="close" type="button" id="lb-close" data-i18n-aria="close">×</button>
     <button class="arrow prev" type="button" id="lb-prev" data-i18n-aria="prev_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <figure id="lb-figure"><div class="ph"></div></figure>
+    <figure id="lb-figure"><img class="ph" alt=""></figure>
     <button class="arrow next" type="button" id="lb-next" data-i18n-aria="next_photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 
@@ -442,7 +442,7 @@
       list.forEach((b, i) => {
         const a = document.createElement("a");
         a.className = "card"; a.href = BC.branchUrl(b.slug); a.style.textDecoration = "none";
-        a.innerHTML = `<div class="ph ph-${(i % 5) + 2}"></div><div class="body"><h3></h3><p></p></div>`;
+        a.innerHTML = `<img class="ph" src="${BC.branchImg(b.slug, "card")}" alt="" loading="lazy"><div class="body"><h3></h3><p></p></div>`;
         a.querySelector("h3").textContent = BC.loc(b.name);
         a.querySelector("p").textContent = BC.loc(b.address) || BC.t("addr_missing");
         box.appendChild(a);
@@ -493,6 +493,7 @@
         a2q: fill(BC.t("a2q")),
         nearbySub: fill(BC.t("nearby_sub"))
       };
+      document.querySelectorAll("[data-bimg]").forEach(img => { img.src = BC.branchImg(B.slug, img.dataset.bimg); });
       document.querySelectorAll("[data-b]").forEach(el => { el.textContent = v[el.dataset.b]; });
       document.title = fill(BC.t("title"));
       document.getElementById("map").title = fill(BC.t("map_title"));
@@ -531,7 +532,7 @@
     function lbShow(i) {
       lbIndex = (i + thumbs.length) % thumbs.length;
       const src = thumbs[lbIndex].querySelector(".ph");
-      lbFig.className = src.className; lbFig.innerHTML = src.innerHTML;
+      lbFig.src = src.src; lbFig.alt = thumbs[lbIndex].getAttribute("aria-label") || "";
     }
     thumbs.forEach((b, i) => b.addEventListener("click", () => { lbShow(i); BC.openDialog(lightbox, document.getElementById("lb-close")); }));
     document.getElementById("lb-close").addEventListener("click", BC.closeDialog);

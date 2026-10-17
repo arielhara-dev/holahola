@@ -60,6 +60,8 @@
     t(k) { return (BC.lang === "he" ? HE[k] : undefined) ?? EN[k] ?? k; },
     loc(o) { return o ? o[BC.lang] ?? o.en : null; },
     branchUrl(slug) { return `boutique.html?b=${encodeURIComponent(slug)}`; },
+    // Fotos de cada sucursal en img/branches/<slug>/: header, card y 1–5 (4 y 5 son apaisadas).
+    branchImg(slug, name) { return `img/branches/${slug}/${name}.jpg`; },
     setLang
   };
 

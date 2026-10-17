@@ -118,12 +118,7 @@ header.site {
 .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease; }
 .slide.active { opacity: 1; }
 .ph { width: 100%; height: 100%; display: grid; place-items: center; }
-.ph span { font-size: var(--fs-sm); letter-spacing: .1em; text-transform: uppercase; opacity: .55; }
-.ph-1 { background: radial-gradient(circle at 70% 40%, #e8b77a, #9a5b2a 55%, #3c2414); }
-.ph-2 { background: radial-gradient(circle at 60% 60%, #f3d9b1, #b9875a 50%, #4a2e1a); }
-.ph-3 { background: radial-gradient(circle at 75% 30%, #d8c3a5, #7d5a44 55%, #2b1d14); }
-.ph-4 { background: radial-gradient(circle at 40% 50%, #f0c7c0, #b56b6b 55%, #3e1f24); }
-.ph-5 { background: radial-gradient(circle at 50% 40%, #e9dcc6, #a08867 55%, #33291d); }
+img.ph { display: block; object-fit: cover; }
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(to right, rgba(10,20,42,.88) 0%, rgba(10,20,42,.65) 45%, rgba(10,20,42,.1) 80%);
@@ -204,6 +199,7 @@ header.site {
 .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(8,14,30,.92); display: none; place-items: center; padding: 24px; }
 .lightbox.open { display: grid; }
 .lightbox figure { width: min(960px, 100%); aspect-ratio: 3 / 2; border-radius: 12px; overflow: hidden; color: #fff; }
+.lightbox img.ph { object-fit: contain; }
 .lightbox .close, .lightbox .arrow { position: absolute; }
 .lightbox .close { top: 16px; inset-inline-end: 16px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.2); color: #fff; font-size: 1.6rem; }
 .lightbox .prev { inset-inline-start: 16px; top: 50%; translate: 0 -50%; }
